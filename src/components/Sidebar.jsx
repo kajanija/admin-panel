@@ -5,8 +5,8 @@ function Sidebar() {
   const [open, setOpen] = useState(true);
   return (
     <div className={`${open ? 'w-70' : 'w-10'} overflow-hidden p-6 border-r-2 border-gray-100`}>
-        <div className={`flex ${open ? 'justify-between' : 'justify-center'}`}>
-            <img src="/vite.svg" className={!open ? 'hidden' : 'block'} />
+        <div className={`flex items-center ${open ? 'justify-between' : 'justify-center'}`}>
+            <p className={!open ? 'hidden' : 'block'}>Admin</p>
             <div className=" p-2 border-2 border-gray-100 rounded-lg flex justify-center items-center">
               <FontAwesomeIcon onClick={() => setOpen(!open)} icon={open ? faChevronLeft : faBars} cursor="pointer" />
             </div>
